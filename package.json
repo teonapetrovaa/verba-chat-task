@@ -1,0 +1,12 @@
+{
+  "name": "verba-chat-task",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && source ../.venv/bin/activate && python -m uvicorn main:app --reload --port 8001",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
